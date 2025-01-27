@@ -4,30 +4,22 @@
 The Semantic Search PDF Summarizer is an AI-powered tool designed to streamline the extraction of key insights from lengthy PDF documents. This project integrates advanced natural language processing (NLP) and generative AI techniques to process PDF files, summarize their content, and provide users with concise, relevant information. The summarizer goes beyond simple keyword extraction by incorporating semantic understanding, enabling it to produce contextually meaningful summaries.
 
 ## Key Features
-* PDF Ingestion:
+1. PDF Ingestion: The project accepts PDF files as input. It parses the content, extracting both text and metadata using libraries like PyPDF2, PDFMiner, or PDFPlumber. Handles complex PDFs with multi-column layouts, embedded images, and tables.
 
-The project accepts PDF files as input. It parses the content, extracting both text and metadata using libraries like PyPDF2, PDFMiner, or PDFPlumber.
-Handles complex PDFs with multi-column layouts, embedded images, and tables.
-Semantic Understanding:
+2. Semantic Understanding: Powered by generative AI models such as OpenAI's GPT with custom fine-tuned technics. Utilizes pre-trained models to understand the semantic structure and meaning of the document's content.
 
-Powered by generative AI models such as OpenAI's GPT, BERT-based transformers, or custom fine-tuned models.
-Utilizes pre-trained models to understand the semantic structure and meaning of the document's content.
-Summarization:
-
+3. Summarization
 Summarizes the document in two modes:
-Extractive Summarization: Selects key sentences directly from the text based on importance and relevance.
-Abstractive Summarization: Generates new sentences to encapsulate the core ideas using generative AI models.
+* Extractive Summarization: Selects key sentences directly from the text based on importance and relevance.
+* Abstractive Summarization: Generates new sentences to encapsulate the core ideas using generative AI models.
 Option to customize the summary length (e.g., short, medium, or detailed).
-Semantic Search:
 
-Users can query specific topics or keywords within the PDF, and the system retrieves and highlights relevant sections.
-Supports natural language queries for intuitive search experiences.
-Interactive Output:
+4. Semantic Search: Users can query specific topics or keywords within the PDF, and the system retrieves and highlights relevant sections. Supports natural language queries for intuitive search experiences.
 
-Displays summaries in user-friendly formats, such as text files or interactive web interfaces.
-Allows users to navigate between summarized sections and full-text references.
-Technical Architecture
-Input Handling:
+5. Interactive Output: Displays summaries in user-friendly formats, such as text files or interactive web interfaces. Allows users to navigate between summarized sections and full-text references.
+
+## Technical Architecture
+- Input Handling:
 
 The project starts with uploading the PDF document.
 Text extraction is performed using OCR (if necessary) for scanned documents.
