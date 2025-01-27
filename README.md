@@ -20,46 +20,47 @@ Option to customize the summary length (e.g., short, medium, or detailed).
 
 ## Technical Architecture
 - Input Handling:
+i. The project starts with uploading the PDF document.
+ii. Text extraction is performed using OCR (if necessary) for scanned documents.
 
-The project starts with uploading the PDF document.
-Text extraction is performed using OCR (if necessary) for scanned documents.
-Preprocessing:
+- Preprocessing:
+i. Cleans and tokenizes the extracted text.
+ii. Handles text normalization, such as removing special characters, handling punctuation, and lowercasing.
 
-Cleans and tokenizes the extracted text.
-Handles text normalization, such as removing special characters, handling punctuation, and lowercasing.
-Model Integration:
+- Model Integration:
+i. Generative AI Models: Fine-tuned language models process the input text for summarization.
+ii. Vectorization: Text embeddings are created using models like ChatGPT for semantic understanding and search capabilities.
 
-Generative AI Models: Fine-tuned language models process the input text for summarization.
-Vectorization: Text embeddings are created using models like Sentence-BERT for semantic understanding and search capabilities.
-Semantic Search Engine:
+- Semantic Search Engine:
+i. Indexes document content using vector databases
+ii. Executes similarity searches for user queries, retrieving the most relevant sections.
 
-Indexes document content using vector databases (e.g., FAISS, Pinecone, or Weaviate).
-Executes similarity searches for user queries, retrieving the most relevant sections.
-Output Generation:
+- Output Generation:
+i. Generates summaries and search results.
+ii. Provides downloadable options and interactive interfaces.
 
-Generates summaries and search results.
-Provides downloadable options and interactive interfaces.
-Implementation Tools and Libraries
-PDF Processing: PyPDF2, PDFMiner, PDFPlumber, Tesseract OCR (for scanned PDFs).
-NLP Models: Hugging Face Transformers, OpenAI GPT models, BERT.
-Search and Embeddings: FAISS, Sentence-BERT, or Pinecone for semantic indexing and retrieval.
-Programming Languages: Python for core development.
-Frameworks: Flask, FastAPI, or Streamlit for building the user interface.
-Use Cases
-Research and Academia:
-Summarizing lengthy academic papers, theses, or technical reports.
-Corporate and Legal:
-Extracting insights from contracts, legal documents, or corporate reports.
-Publishing and Content Creation:
-Condensing books, manuals, or policy documents into digestible formats.
-Potential Challenges
-Complex Formatting: Managing documents with intricate layouts, images, or annotations.
-Scanned PDFs: Reliance on OCR for text extraction from image-based PDFs can introduce inaccuracies.
-Model Limitations: Ensuring the generative AI model avoids hallucinations or producing irrelevant content.
-Scalability: Handling large files and delivering results within reasonable timeframes.
-Future Enhancements
-Multi-Language Support: Expanding the system to summarize PDFs in various languages.
-Contextual Summaries: Allowing users to specify areas of interest for more focused summaries.
-Integration with Collaboration Tools: Exporting results to platforms like Slack, Trello, or Google Docs.
-Mobile Application: Developing a mobile-friendly interface for on-the-go access.
-The Semantic Search PDF Summarizer is a cutting-edge tool that bridges the gap between voluminous data and actionable insights, saving users time and effort while improving productivity.
+## Implementation Tools and Libraries
+1. PDF Processing: PyPDF2, PDFMiner, PDFPlumber, Tesseract OCR (for scanned PDFs).
+2. NLP Models: OpenAI GPT models specifically chatGPT with custom fine-tuning
+3. Search and Embeddings: for semantic indexing and retrieval.
+4. Programming Languages: Python for core development.
+5. Frameworks: Streamlit for building the user interface.
+
+### Use Cases
+1. Research and Academia: Summarizing lengthy academic papers, theses, or technical reports.
+2. Corporate and Legal: Extracting insights from contracts, legal documents, or corporate reports.
+3. Publishing and Content Creation: Condensing books, manuals, or policy documents into digestible formats.
+
+### Potential Challenges
+i. Complex Formatting: Managing documents with intricate layouts, images, or annotations.
+ii. Scanned PDFs: Reliance on OCR for text extraction from image-based PDFs can introduce inaccuracies.
+iii. Model Limitations: Ensuring the generative AI model avoids hallucinations or producing irrelevant content.
+iv. Scalability: Handling large files and delivering results within reasonable timeframes.
+
+### Future Enhancements
+1. Multi-Language Support: Expanding the system to summarize PDFs in various languages.
+2. Contextual Summaries: Allowing users to specify areas of interest for more focused summaries.
+3. Integration with Collaboration Tools: Exporting results to platforms like Slack, Trello, or Google Docs.
+4. Mobile Application: Developing a mobile-friendly interface for on-the-go access.
+
+## The Semantic Search PDF Summarizer is a cutting-edge tool that bridges the gap between voluminous data and actionable insights, saving users time and effort while improving productivity.
